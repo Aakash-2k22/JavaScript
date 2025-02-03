@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Taking user input
+        let a = prompt("Enter a number:");
+        let b = prompt("Enter another number:");
+
+        // 1️. Using AND (&&) → Both numbers should be positive
+        if (a > 0 && b > 0) {
+            console.log(" Both numbers are positive.");
+        }
+
+        // 2️. Using OR (||) → At least one number should be negative
+        if (a < 0 || b < 0) {
+            console.log(" At least one number is negative.");
+        }
+
+        // 3️. Using NOT (!) → Negate the condition to check if a number is NOT positive
+        if (!(a > 0)) {
+            console.log(" First number is NOT positive.");
+        }
+
+
+
+    </script>
+</body>
+
+</html>
