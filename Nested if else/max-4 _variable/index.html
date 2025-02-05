@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // checking a maximum number using nested if else
+        let num1 = prompt("Enetr num1 : ");
+        let num2 = prompt("Enetr num2 : ");
+        let num3 = prompt("Enetr num3 : ");
+        let num4 = prompt("Enetr num4 : ");
+
+        console.log("First number is : ",num1);
+        console.log("Second number is : ",num2);
+        console.log("Third number is : ",num3);
+        console.log("forth number is : ",num4);
+
+        
+        let a = parseInt(num1);
+        let b = parseInt(num2);
+        let c = parseInt(num3);
+        let d = parseInt(num4);
+
+
+        // a,b,c,d
+        if(a>b){
+            //a,c,d
+            if(a>c){
+                // a,d
+                if(a>d){
+                    console.log("num1 is maximum !!");
+                }
+                else{
+                    console.log("num4 is maximum !!");
+                }
+            }
+            else{
+                // c,d
+                if(c>d){
+                    console.log("num3 is maximum !!");
+                }
+                else{
+                    console.log("num4 is maximum !!");
+                }
+            }
+        }
+        else{
+            // b,c,d
+            if(b>c){
+                //b,d
+                if(b>d){
+                    console.log("num2 is maximum !!");
+                }
+                else{
+                    console.log("num4 is maximum !!");
+                }
+            }
+            else{
+                //c,d
+                if(c>d){
+                    console.log("num3 is maximum !!");
+
+                }
+                else{
+                    console.log("num4 is maximum !!");
+
+                }
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // checking a minimum number using nested if else
+        let num1 = prompt("Enetr num1 : ");
+        let num2 = prompt("Enetr num2 : ");
+        let num3 = prompt("Enetr num3 : ");
+
+        console.log("First number is : ",num1);
+        console.log("Second number is : ",num2);
+        console.log("Third number is : ",num3);
+
+        let a = parseInt(num1);
+        let b = parseInt(num2);
+        let c = parseInt(num3);
+
+        // num1,num2,num3
+        if(a<b){
+            if(a<c){
+                console.log("first has minimum value !!");
+            }
+            else{
+                console.log("Third has minimum value !!");
+            }
+        }
+        else{
+            if(b<c){
+                console.log("Second has minimum value !!");
+            }
+            else{
+                console.log("Third has minimum value !!");
+            }
+        }
+
+    </script>
+</body>
+</html>
