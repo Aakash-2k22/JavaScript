@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let n = prompt("Enter a number (n): ");
+
+        document.write("USING FOR LOOP" + " --> ");
+
+        // Printing n to 1 using for loop
+        for (let i = n; i >= 1; i--) {
+            document.write(i + " ");
+        }
+    </script>
+
+    <br>
+
+    <script>
+        document.write("USING WHILE LOOP" + " --> ");
+
+        // Printing n to 1 using while loop
+        let i = n;
+        while (i >= 1) {
+            document.write(i + " ");
+            i--;
+        }
+    </script>
+
+    <br>
+
+    <script>
+        document.write("USING DO WHILE LOOP" + " --> ");
+
+        // Printing n to 1 using do while loop
+        let j = n;
+        do {
+            document.write(j + " ");
+            j--;
+        } while (j >= 1);
+    </script>
+</body>
+
+</html>
