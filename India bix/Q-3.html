@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 36, 34, 30, 28, 24, ... 
+
+        let n = parseInt(prompt("Enter n : "));
+
+        let first = 36;
+        let second = 34;
+
+        for(let i=1; n>=i ; n--){
+            
+            document.write(first + " ");
+            document.write(second + " ");
+            first-=6;
+            second-=6;    
+            
+        }
+    </script>
+</body>
+</html>
