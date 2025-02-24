@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let num = parseInt(prompt("Enter a number : "));
+
+        function IsSum(n) {
+            if (n >= 1) {
+                return n + IsSum(n - 1);
+            }
+            else {
+                return 0;
+            }
+        }
+        let ans = IsSum(num);
+        document.write("Sum of " + num + " " + "is" + " " + ans);
+    </script>
+</body>
+
+</html>
