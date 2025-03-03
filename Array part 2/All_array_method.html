@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Create array with 6 animal names
+        let animals = ["Tiger", "Elephant", "Monkey", "Eagle", "Dog", "Panda"];
+
+        // Original Array
+        console.log("Original array:", animals);
+
+        // 1. push() - Adds element to end
+        animals.push("Snow Leopard");
+        console.log("After push:", animals);
+
+        // 2. pop() - Removes last element
+        let removedLast = animals.pop();
+        console.log("After pop:", animals);
+        console.log("Popped item:", removedLast);
+
+        // 3. shift() - Removes first element
+        let removedFirst = animals.shift();
+        console.log("After shift:", animals);
+        console.log("Shifted item:", removedFirst);
+
+        // 4. unshift() - Adds element to start
+        animals.unshift("Lion");
+        console.log("After unshift:", animals);
+
+        // 5. at() - Gets element at index
+        console.log("Element at index 2:", animals.at(2));
+
+        // 6. slice() - Extracts portion of array
+        let sliced = animals.slice(1, 3);
+        console.log("Sliced portion:", sliced);
+        console.log("Original after slice:", animals);
+
+        // 7. indexOf() - Finds index of element
+        let pandaIndex = animals.indexOf("Panda");
+        console.log("Index of Panda:", pandaIndex);
+
+        // 8. includes() - Checks if element exists
+        let hasTiger = animals.includes("Tiger");
+        console.log("Contains Tiger?", hasTiger);
+
+        // 9. length - Gets array length
+        console.log("Array length:", animals.length);
+
+        // 10. reverse() - Reverses array
+        animals.reverse();
+        console.log("After reverse:", animals);
+
+        // 11. join() - Joins elements into string
+        let animalString = animals.join(", ");
+        console.log("Joined array:", animalString);
+    </script>
+</body>
+
+</html>
