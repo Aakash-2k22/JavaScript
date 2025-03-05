@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let user = [
+            {
+                name: "aakash",
+                age: 20,
+                username: "Aakash_2k22",
+                address: {
+                    city: "surat",
+                    area: "dindoli",
+                    pincode: 394210,
+                    geo: {
+                        lat: -37.3159,
+                        lng: 81.1496,
+                        company: {
+                            name: "URAPVKA",
+                            owner: "Aakash"
+                        }
+                    }
+                }
+            }
+        ];
+
+        document.write("Name: " + user[0].name + "<br>");
+        document.write("Age: " + user[0].age + "<br>");
+        document.write("Username: " + user[0].username + "<br>");
+        document.write("City: " + user[0].address.city + "<br>");
+        document.write("Area: " + user[0].address.area + "<br>");
+        document.write("Pincode: " + user[0].address.pincode + "<br>");
+        document.write("Latitude: " + user[0].address.geo.lat + "<br>");
+        document.write("Longitude: " + user[0].address.geo.lng + "<br>");
+        document.write("Company Name: " + user[0].address.geo.company.name + "<br>");
+        document.write("Company Owner: " + user[0].address.geo.company.owner + "<br>");
+    </script>
+</body>
+
+</html>

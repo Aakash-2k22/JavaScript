@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let recipes = {
+            recipes: [
+                {
+                    id: 1,
+                    name: "Classic Margherita Pizza",
+                    ingredients: [
+                        "Pizza dough",
+                        "Tomato sauce",
+                        "Fresh mozzarella cheese",
+                        "Fresh basil leaves",
+                        "Olive oil",
+                        "Salt and pepper to taste"
+                    ],
+                    instructions: [
+                        "Preheat the oven to 475°F (245°C).",
+                        "Roll out the pizza dough and spread tomato sauce evenly.",
+                        "Top with slices of fresh mozzarella and fresh basil leaves.",
+                        "Drizzle with olive oil and season with salt and pepper.",
+                        "Bake in the preheated oven for 12-15 minutes or until the crust is golden brown.",
+                        "Slice and serve hot."
+                    ],
+                    prepTimeMinutes: 20,
+                    cookTimeMinutes: 15,
+                    servings: 4,
+                    difficulty: "Easy",
+                    cuisine: "Italian",
+                    caloriesPerServing: 300,
+                    tags: [
+                        "Pizza",
+                        "Italian"
+                    ],
+                    userId: 166,
+                    rating: 4.6,
+                    reviewCount: 98,
+                    mealType: [
+                        "Dinner"
+                    ]
+                }
+            ]
+        };
+
+        
+        document.write("<h2>" + recipes.recipes[0].name + "</h2>");
+        document.write("ID: " + recipes.recipes[0].id + "<br>");
+        document.write("Cuisine: " + recipes.recipes[0].cuisine + "<br>");
+        document.write("Difficulty: " + recipes.recipes[0].difficulty + "<br>");
+        document.write("Prep Time: " + recipes.recipes[0].prepTimeMinutes + " minutes<br>");
+        document.write("Cook Time: " + recipes.recipes[0].cookTimeMinutes + " minutes<br>");
+        document.write("Servings: " + recipes.recipes[0].servings + "<br>");
+        document.write("Calories per Serving: " + recipes.recipes[0].caloriesPerServing + "<br>");
+        document.write("Rating: " + recipes.recipes[0].rating + " (" + recipes.recipes[0].reviewCount + " reviews)<br>");
+
+        document.write("<h3>Ingredients:</h3>");
+        recipes.recipes[0].ingredients.forEach(ingredient => {
+            document.write("- " + ingredient + "<br>");
+        });
+
+        document.write("<h3>Instructions:</h3>");
+        recipes.recipes[0].instructions.forEach((instruction, index) => {
+            document.write((index + 1) + ". " + instruction + "<br>");
+        });
+
+        document.write("Tags: " + recipes.recipes[0].tags.join(", ") + "<br>");
+        document.write("Meal Type: " + recipes.recipes[0].mealType.join(", ") + "<br>");
+    </script>
+</body>
+
+</html>
