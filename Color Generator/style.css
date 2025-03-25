@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    transition: 0.3s;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 100px;
+    width: 380px;
+    background-color: white;
+    border-radius: 15px ;
+}
+button{
+    width: 93%;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#color-code{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
