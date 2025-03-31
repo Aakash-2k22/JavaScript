@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class BankAccount {
+            #balance;
+
+            constructor(initialBalance = 0) {
+                this.#balance = initialBalance;
+            }
+
+            deposit(amount) {
+                if (amount > 0) {
+                    this.#balance += amount;
+                    document.writeln(`Deposited: ${amount}<br>`);
+                } else {
+                    document.writeln("Deposit amount must be positive.");
+                }
+            }
+
+            withdraw(amount) {
+                if (amount > 0 && amount <= this.#balance) {
+                    this.#balance -= amount;
+                    document.writeln(`Withdrawn: ${amount}<br>`);
+                } else {
+                    document.writeln("Invalid withdrawal amount or insufficient funds.");
+                }
+            }
+
+            getBalance() {
+                return this.#balance;
+            }
+        }
+
+        // Example usage:
+        const myAccount = new BankAccount(100);
+        myAccount.deposit(50);
+        myAccount.withdraw(30);
+        document.writeln("Current Balance:", myAccount.getBalance());
+
+    </script>
+</body>
+
+</html>

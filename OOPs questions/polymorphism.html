@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Payment {
+            pay(amount, currency = "USD") {
+                document.writeln(`Processing payment of ${amount} ${currency}.<br>`);
+            }
+        }
+
+        class CreditCard extends Payment {
+            pay(amount, currency = "USD") {
+                document.writeln(`Paid ${amount} ${currency} using Credit Card.<br>`);
+            }
+        }
+
+        class PayPal extends Payment {
+            pay(amount, currency = "USD") {
+                document.writeln(`Paid ${amount} ${currency} using PayPal.<br>`);
+            }
+        }
+
+        const creditPayment = new CreditCard();
+        creditPayment.pay(100);
+        creditPayment.pay(200, "INR");
+
+        document.writeln("<br>");
+
+        const paypalPayment = new PayPal();
+        paypalPayment.pay(50);
+        paypalPayment.pay(75, "EUR");
+
+    </script>
+</body>
+
+</html>

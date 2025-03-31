@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Restaurant {
+            constructor(name, type, rating) {
+                this.name = name;
+                this.type = type;
+                this.rating = rating;
+            }
+
+            getDetails() {
+                document.writeln(`Restaurant: ${this.name}<br>`);
+                document.writeln(`Cuisine Type: ${this.type}<br>`);
+                document.writeln(`Rating: ${this.rating} stars<br><br>`);
+            }
+        }
+
+        // Creating restaurant objects
+        const restaurant1 = new Restaurant("Sarvottam", "Indian", 5);
+        const restaurant2 = new Restaurant("The Spice House", "Indian", 4.5);
+        const restaurant3 = new Restaurant("Sushi World", "Japanese", 4.8);
+        const restaurant4 = new Restaurant("Pasta Paradise", "Italian", 4.3);
+        
+
+        // Display restaurant details
+        restaurant1.getDetails();
+        restaurant2.getDetails();
+        restaurant3.getDetails();
+        restaurant4.getDetails();
+        
+
+
+    </script>
+</body>
+
+</html>

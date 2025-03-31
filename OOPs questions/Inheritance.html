@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Vehicle {
+            constructor(brand, year) {
+                this.brand = brand;
+                this.year = year;
+            }
+
+            getDetails() {
+                return `Brand: ${this.brand}, Year: ${this.year}`;
+            }
+        }
+
+        class Car extends Vehicle {
+            constructor(brand, year, fuelType) {
+                super(brand, year);
+                this.fuelType = fuelType;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}, Fuel Type: ${this.fuelType}`;
+            }
+        }
+
+        class Bike extends Vehicle {
+            constructor(brand, year, hasGear) {
+                super(brand, year);
+                this.hasGear = hasGear;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}, Has Gear: ${this.hasGear ? 'Yes' : 'No'}`;
+            }
+        }
+
+        class ElectricCar extends Car {
+            constructor(brand, year, fuelType, batteryCapacity) {
+                super(brand, year, fuelType);
+                this.batteryCapacity = batteryCapacity;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}, Battery Capacity: ${this.batteryCapacity} kWh`;
+            }
+        }
+
+        const myCar = new Car("Toyota", 2020, "Petrol <br>");
+        document.writeln(myCar.getDetails());
+
+        const myBike = new Bike("Yamaha", 2022, true );
+        document.writeln(myBike.getDetails());
+
+        const myElectricCar = new ElectricCar("Tesla", 2023, "Electric", 75);
+        document.writeln(myElectricCar.getDetails());
+
+    </script>
+</body>
+
+</html>

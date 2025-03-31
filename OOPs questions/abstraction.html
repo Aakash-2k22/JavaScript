@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Car {
+            constructor(brand) {
+                if (new.target === Car) {
+                    throw new Error("Cannot instantiate an abstract class.");
+                }
+                this.brand = brand;
+            }
+
+            startEngine() {
+                throw new Error("startEngine() must be implemented by subclasses.");
+            }
+        }
+
+        class PetrolCar extends Car {
+            startEngine() {
+                document.writeln(`${this.brand} Petrol Car engine starts with a roar!<br>`);
+            }
+        }
+
+        class ElectricCar extends Car {
+            startEngine() {
+                document.writeln(`${this.brand} Electric Car engine starts silently!<br>`);
+            }
+        }
+
+        // Example usage:
+        const petrolCar = new PetrolCar("Tata");
+        petrolCar.startEngine();
+
+        document.writeln("<br>");
+
+        const electricCar = new ElectricCar("Tesla");
+        electricCar.startEngine();
+
+    </script>
+</body>
+
+</html>
