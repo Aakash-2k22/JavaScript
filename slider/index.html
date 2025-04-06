@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f2f2f2;
+            background: linear-gradient(145deg , #AAC363 , #4DAD9C);
+        }
+        h1{
+            position: absolute;
+            top: 82%;
+            color: rgb(45, 102, 83);
+            text-decoration: overline;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 700px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-container img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .slider-container img.active {
+            display: block;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+            border-radius: 50%;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Slider</h1>
+
+    <div class="slider-container">
+        <img src="images/images1.jpg" class="active" />
+        <img src="images/images2.jpg" />
+        <img src="images/images3.jpg" />
+
+        <button id="prev" class="btn">&#8592;</button>
+        <button id="next" class="btn">&#8594;</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let index = 0;
+            const slides = $(".slider-container img");
+            const total = slides.length;
+            let timer;
+
+            function showSlide(i) {
+                slides.removeClass("active");
+                slides.eq(i).addClass("active");
+
+                // clear and reset auto slide
+                clearTimeout(timer);
+                timer = setTimeout(nextSlide, 3000);
+            }
+
+            function nextSlide() {
+                index = (index + 1) % total;
+                showSlide(index);
+            }
+
+            function prevSlide() {
+                index = (index - 1 + total) % total;
+                showSlide(index);
+            }
+
+            $("#next").click(function () {
+                nextSlide();
+            });
+
+            $("#prev").click(function () {
+                prevSlide();
+            });
+
+            // Start auto slide
+            timer = setTimeout(nextSlide, 3000);
+        });
+    </script>
+
+</body>
+
+</html>
