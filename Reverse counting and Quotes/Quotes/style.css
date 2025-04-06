@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #a82323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .quote-container {
+    width: 600px;
+    
+    padding: 40px;
+    background: linear-gradient(175deg, #D91A1A , #8F1D1E);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    position: relative;
+    min-height: 120px;
+  }
+
+  .quote {
+    display: none;
+    color: white;
+  }
+
+  .quote.active {
+    display: block;
+  }
+
+  .author {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ffffff;
+    font-style: italic;
+  }

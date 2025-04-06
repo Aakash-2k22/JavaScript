@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Quote Slider</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="quote-container">
+  <div class="quote active">
+    "driven by code, shaped by discipline, and powered by purpose. A learner today, a leader tomorrow."
+    <div class="author">— Aakash Keshari</div>
+  </div>
+  <div class="quote">
+    "The best way to get started is to quit talking and begin doing."
+    <div class="author">— Walt Disney</div>
+  </div>
+  <div class="quote">
+    "Don’t let yesterday take up too much of today."
+    <div class="author">— Will Rogers</div>
+  </div>
+  <div class="quote">
+    "It’s not whether you get knocked down, it’s whether you get up."
+    <div class="author">— Vince Lombardi</div>
+  </div>
+  <div class="quote">
+    "If you are working on something exciting, it will keep you motivated."
+    <div class="author">— Steve Jobs</div>
+  </div>
+  <div class="quote">
+    "Success is not in what you have, but who you are."
+    <div class="author">— Bo Bennett</div>
+  </div>
+  
+</div>
+
+<script>
+  $(document).ready(function () {
+    let index = 0;
+    const quotes = $(".quote");
+    const total = quotes.length;
+    let timer;
+
+    function showQuote(i) {
+      quotes.removeClass("active");
+      quotes.eq(i).addClass("active");
+
+      timer = setTimeout(nextQuote, 3000);
+    }
+
+    function nextQuote() {
+      index = (index + 1) % total;
+      showQuote(index);
+    }
+
+    timer = setTimeout(nextQuote, 3000);
+  });
+</script>
+
+</body>
+</html>
