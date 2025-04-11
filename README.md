@@ -33,7 +33,6 @@ Watch the demo video below:
 
 <img src = "outputv.gif">
 
-> Click the image to watch the video on YouTube.
 
 
 
@@ -57,11 +56,6 @@ Edit
 ## 🤝 Contributing
 Feel free to fork this repo and make changes. Pull requests are welcome!
 
-## 📜 License
-This project is licensed under the MIT License.
-✅ 4. Uploading a Video
-Record your app demo using screen recorder (like OBS Studio, Loom, etc.)
 
-Upload the video to YouTube
 
-Replace YOUR_VIDEO_ID in the link https://www.youtube.com/watch?v=YOUR_VIDEO_ID with the actual video ID
+
